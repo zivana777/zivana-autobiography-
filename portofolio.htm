@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zivana Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+overflow-x:hidden;
+}
+
+/* OPENING */
+#opening{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#6d3a3a,#8c4c4c);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+transition:1s;
+}
+
+.opening-content{
+text-align:center;
+color:white;
+animation:fadeIn 1.5s ease;
+}
+
+.opening-content h1{
+font-family:'Playfair Display';
+font-size:60px;
+}
+
+.opening-content button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+background:white;
+color:#6d3a3a;
+border-radius:25px;
+cursor:pointer;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.85);
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+z-index:1000;
+}
+
+nav h2{
+font-family:'Playfair Display';
+color:#222;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#7a3b3b;
+transform:translateY(-2px);
+}
+
+/* SECTION */
+.section{
+min-height:100vh;
+padding:120px 8%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* CONTENT */
+.content{
+max-width:1100px;
+display:flex;
+align-items:center;
+gap:60px;
+opacity:1;
+transform:none;
+}
+
+/* IMAGE */
+.profile{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:0.4s;
+}
+
+.profile:hover{
+transform:scale(1.08);
+}
+
+/* CARD */
+.paper{
+background:rgba(255,255,255,0.85);
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+max-width:500px;
+transition:0.4s;
+}
+
+.paper:hover{
+transform:translateY(-5px);
+}
+
+.paper h1{
+font-family:'Playfair Display';
+font-size:40px;
+color:#6d3a3a;
+margin-bottom:15px;
+}
+
+.paper p{
+line-height:1.8;
+color:#333;
+}
+
+/* BUTTON */
+.btn-3d{
+display:inline-block;
+margin-top:20px;
+padding:12px 35px;
+background:#6d3a3a;
+color:white;
+border-radius:30px;
+text-decoration:none;
+box-shadow:0 6px 0 #4b2424;
+}
+
+.btn-3d:active{
+transform:translateY(6px);
+box-shadow:0 0;
+}
+
+/* SOCIAL */
+.socials{
+margin-top:20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.socials a{
+padding:8px 16px;
+border-radius:12px;
+background:white;
+color:#6d3a3a;
+text-decoration:none;
+font-size:14px;
+}
+
+.socials a:hover{
+background:#6d3a3a;
+color:white;
+}
+
+/* BG */
+#about,#dream,#extra{
+background:linear-gradient(135deg,#6d3a3a,#8c4c4c);
+}
+
+#hobby,#education-history{
+background:linear-gradient(135deg,#f3ebe3,#e5d8ca);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.content{
+flex-direction:column;
+text-align:center;
+}
+nav{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<div id="opening">
+  <div class="opening-content">
+    <h1>Welcome</h1>
+    <p>to Zivana Portfolio</p>
+    <button onclick="enterSite()">Enter</button>
+  </div>
+</div>
+
+<nav>
+<h2>Zivana</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#hobby">Hobby</a></li>
+<li><a href="#dream">Dream</a></li>
+<li><a href="#education-history">Education</a></li>
+<li><a href="#extra">More</a></li>
+</ul>
+</nav>
+
+<section id="about" class="section">
+<div class="content">
+<img src="yyyyy.jpeg" class="profile" loading="lazy">
+<div class="paper">
+<h1>About Me</h1>
+<p><b>Hai semua, aku Zivana Putri Ramadhani. Aku lahir di Bekasi 19 Agustus 2011. Aku anak pertama dan satu-satunya.</b></p>
+<a href="#hobby" class="btn-3d">Start</a>
+</div>
+</div>
+</section>
+
+<section id="hobby" class="section">
+<div class="content">
+<img src="music.jpg" class="profile" loading="lazy">
+<div class="paper">
+<h1>My Hobby</h1>
+<p>Hobi aku baca novel, main Roblox, main ML, dan dengerin musik.</p>
+<a href="#dream" class="btn-3d">Next</a>
+</div>
+</div>
+</section>
+
+<section id="dream" class="section">
+<div class="content">
+<img src="ugm.jpg" class="profile" loading="lazy">
+<div class="paper">
+<h1>My Dream</h1>
+<p>Masuk SMA 2 Tamsel, membahagiakan orang tua, 
+   dan kuliah sesuai jurusan impian.</p>
+<a href="#education-history" class="btn-3d">Next</a>
+</div>
+</div>
+</section>
+
+<section id="education-history" class="section">
+<div class="content">
+<img src="ugb.jpg" class="profile" loading="lazy">
+<div class="paper">
+<h1>Education</h1>
+<p>TK & SD: Daarul Fikri. 
+   SMPIT Fitrah Hanniah. 
+   SMA (aamiin): SMAN 2 Tamsel.</p>
+<a href="#extra" class="btn-3d">Next</a>
+</div>
+</div>
+</section>
+
+<section id="extra" class="section">
+<div class="content"> 
+<img src="not mine.jpg" class="profile" loading="lazy">
+<div class="paper">
+<h1>More About Me</h1>
+<p>Aku suka hewan seperti kucing, ikan, hamster. Warna favorit: navy, maroon, dark green.</p>
+<div class="socials">
+<a href="https://instagram.com/jipjippppp_/" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@jipppppp__/" target="_blank">Tiktok</a>
+<a href="https://www.roblox.com/users/9840641929/profile" target="_blank">Roblox</a>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+function enterSite(){
+document.getElementById("opening").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("opening").style.display="none";
+},1000);
+}
+</script>
+
+</body>
+</html>
